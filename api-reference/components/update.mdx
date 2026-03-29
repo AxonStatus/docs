@@ -1,0 +1,23 @@
+---
+title: "Update Component"
+description: "Update a component's status or details"
+---
+
+```
+PATCH /api/v1/components/{id}
+```
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `name` | string | Component name |
+| `status` | string | `operational`, `degraded_performance`, `partial_outage`, `major_outage`, `under_maintenance` |
+| `description` | string | Brief description |
+
+<CodeGroup>
+```bash curl
+curl -X PATCH https://api.axonstatus.com/api/v1/components/abc123 \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{"status": "major_outage"}'
+```
+</CodeGroup>

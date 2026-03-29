@@ -1,0 +1,32 @@
+---
+title: "Widget & Badge"
+description: "Embed your status on any website"
+---
+
+## Script embed
+
+Add a live status badge to your website with a single script tag:
+
+```html
+<script src="https://your-slug.axonstatus.com/widget/badge.js" async></script>
+```
+
+The badge shows a colored dot with the current status text and links to your status page.
+
+## Widget API
+
+For custom integrations, use the JSON endpoint:
+
+```bash
+curl https://axonstatus.com/api/v1/widget/your-slug
+```
+
+Returns the current status summary including ongoing incidents and maintenances.
+
+## SVG Badge
+
+For READMEs and static embeds:
+
+```markdown
+[![Status](https://axonstatus.com/api/v1/badge/your-slug)](https://your-slug.axonstatus.com)
+```

@@ -1,0 +1,23 @@
+---
+title: "Update Incident"
+description: "Update an incident's status or details"
+---
+
+```
+PATCH /api/v1/incidents/{id}
+```
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `title` | string | Incident title |
+| `status` | string | `investigating`, `identified`, `monitoring`, `resolved` |
+| `impact` | string | `none`, `minor`, `major`, `critical` |
+
+<CodeGroup>
+```bash curl
+curl -X PATCH https://api.axonstatus.com/api/v1/incidents/inc-123 \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{"status": "resolved"}'
+```
+</CodeGroup>

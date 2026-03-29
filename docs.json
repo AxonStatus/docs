@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "AxonStatus",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#22c55e",
+    "light": "#4ade80",
+    "dark": "#16a34a"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -15,54 +15,73 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
+            "pages": ["index", "quickstart", "authentication"]
           },
           {
-            "group": "Customization",
+            "group": "Core concepts",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "guides/status-pages",
+              "guides/components",
+              "guides/incidents",
+              "guides/subscribers",
+              "guides/monitoring",
+              "guides/widget"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Overview",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/introduction",
+              "api-reference/errors"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Public",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/public/status",
+              "api-reference/public/widget",
+              "api-reference/public/badge"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "api-reference/components/list",
+              "api-reference/components/create",
+              "api-reference/components/update",
+              "api-reference/components/delete"
+            ]
+          },
+          {
+            "group": "Incidents",
+            "pages": [
+              "api-reference/incidents/list",
+              "api-reference/incidents/create",
+              "api-reference/incidents/update",
+              "api-reference/incidents/delete",
+              "api-reference/incidents/add-update"
+            ]
+          },
+          {
+            "group": "Monitors",
+            "pages": [
+              "api-reference/monitors/list",
+              "api-reference/monitors/create",
+              "api-reference/monitors/update",
+              "api-reference/monitors/delete"
+            ]
+          },
+          {
+            "group": "Subscribers",
+            "pages": [
+              "api-reference/subscribers/list",
+              "api-reference/subscribers/subscribe",
+              "api-reference/subscribers/delete"
             ]
           }
         ]
@@ -71,14 +90,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Dashboard",
+          "href": "https://axonstatus.com",
+          "icon": "browser"
         }
       ]
     }
@@ -91,32 +105,18 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@axonstatus.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://axonstatus.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/axonstatus"
     }
   }
 }

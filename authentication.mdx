@@ -1,0 +1,40 @@
+---
+title: "Authentication"
+description: "How to authenticate with the AxonStatus API"
+---
+
+The AxonStatus API supports two authentication methods.
+
+## API Keys
+
+API keys are the recommended way to authenticate. Create one in **Settings > API Keys** in the dashboard.
+
+```bash
+curl https://api.axonstatus.com/api/v1/components \
+  -H "Authorization: Bearer axon_sk_your_key_here"
+```
+
+API keys are scoped to your organization and have access to all resources within it.
+
+<Warning>
+Keep your API keys secret. Do not commit them to version control or expose them in client-side code.
+</Warning>
+
+## JWT Tokens
+
+JWT tokens are used by the dashboard for session-based authentication. They are short-lived (15 minutes) and obtained via the token exchange endpoint.
+
+```bash
+curl -X POST https://api.axonstatus.com/api/v1/auth/token \
+  -H "Content-Type: application/json" \
+  -d '{"email": "you@company.com"}'
+```
+
+## Public endpoints
+
+Some endpoints don't require authentication:
+
+- `GET /api/v1/status/:slug` — Status page overview
+- `GET /api/v1/widget/:slug` — Widget JSON summary
+- `GET /api/v1/badge/:slug` — SVG status badge
+- `POST /api/v1/subscribers` — Subscribe to updates

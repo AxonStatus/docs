@@ -1,0 +1,31 @@
+---
+title: "Create Monitor"
+description: "Add a new uptime monitor"
+---
+
+```
+POST /api/v1/monitoring
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `name` | string | Yes | Monitor name |
+| `url` | string | Yes | URL to monitor |
+| `type` | string | Yes | `http`, `tcp`, `dns`, `ping` |
+| `alertCondition` | string | No | `unavailable`, `status_not_2xx`, `response_time`, `ssl_expiry` |
+| `responseTimeThreshold` | number | No | Threshold in ms |
+| `sslExpiryDays` | number | No | Days before expiry to alert |
+
+<CodeGroup>
+```bash curl
+curl -X POST https://api.axonstatus.com/api/v1/monitoring \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "API Health",
+    "url": "https://api.example.com/health",
+    "type": "http",
+    "alertCondition": "status_not_2xx"
+  }'
+```
+</CodeGroup>

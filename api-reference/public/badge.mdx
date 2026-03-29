@@ -1,0 +1,28 @@
+---
+title: "Status Badge"
+description: "Dynamic SVG badge for embedding"
+---
+
+<Note>This endpoint is public. Returns an SVG image.</Note>
+
+## Get status badge
+
+```
+GET /api/v1/badge/{slug}
+```
+
+Returns a dynamic SVG showing the current status. Cached for 5 minutes.
+
+### HTML embed
+
+```html
+<a href="https://acme.axonstatus.com">
+  <img src="https://axonstatus.com/api/v1/badge/acme" alt="Status">
+</a>
+```
+
+### Markdown
+
+```markdown
+[![Status](https://axonstatus.com/api/v1/badge/acme)](https://acme.axonstatus.com)
+```

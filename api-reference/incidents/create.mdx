@@ -1,0 +1,34 @@
+---
+title: "Create Incident"
+description: "Report a new incident"
+---
+
+```
+POST /api/v1/incidents
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `title` | string | Yes | Incident title |
+| `status` | string | Yes | `investigating`, `identified`, `monitoring`, `resolved` |
+| `impact` | string | Yes | `none`, `minor`, `major`, `critical` |
+| `message` | string | No | Initial update message |
+| `statusPageId` | string | Yes | Status page ID |
+| `componentIds` | string[] | No | Affected component IDs |
+
+<CodeGroup>
+```bash curl
+curl -X POST https://api.axonstatus.com/api/v1/incidents \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "API latency issues",
+    "status": "investigating",
+    "impact": "minor",
+    "message": "Investigating increased response times.",
+    "statusPageId": "page-id"
+  }'
+```
+</CodeGroup>
+
+<Info>Creating an incident automatically notifies confirmed subscribers.</Info>

@@ -1,0 +1,17 @@
+---
+title: "Update Monitor"
+description: "Update monitor configuration"
+---
+
+```
+PATCH /api/v1/monitoring/{id}
+```
+
+<CodeGroup>
+```bash curl
+curl -X PATCH https://api.axonstatus.com/api/v1/monitoring/mon-123 \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{"enabled": false}'
+```
+</CodeGroup>

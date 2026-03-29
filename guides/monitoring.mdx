@@ -1,0 +1,28 @@
+---
+title: "Monitoring"
+description: "Automated uptime checks for your services"
+---
+
+AxonStatus monitors your services 24/7 and automatically updates component status.
+
+## Check types
+
+| Type | Description |
+|------|-------------|
+| `http` | HTTP/HTTPS request, checks status code and response time |
+| `tcp` | TCP connection test |
+| `dns` | DNS resolution check |
+| `ping` | ICMP ping |
+
+## Alert conditions
+
+| Condition | Triggers when |
+|-----------|--------------|
+| `unavailable` | Service doesn't respond |
+| `status_not_2xx` | HTTP response is not 2xx |
+| `response_time` | Response exceeds threshold (ms) |
+| `ssl_expiry` | SSL certificate expires within X days |
+
+## Automatic status updates
+
+After 3 consecutive failures, the linked component is set to `major_outage`. When the check succeeds again, the component returns to `operational`.

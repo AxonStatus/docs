@@ -1,0 +1,25 @@
+---
+title: "Subscribe"
+description: "Subscribe an email to status updates"
+---
+
+<Note>This endpoint is public and does not require authentication.</Note>
+
+```
+POST /api/v1/subscribers
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `email` | string | Yes | Email address |
+| `statusPageId` | string | Yes | Status page ID |
+
+A confirmation email is sent. The subscription becomes active after confirmation.
+
+<CodeGroup>
+```bash curl
+curl -X POST https://api.axonstatus.com/api/v1/subscribers \
+  -H "Content-Type: application/json" \
+  -d '{"email": "user@example.com", "statusPageId": "page-id"}'
+```
+</CodeGroup>

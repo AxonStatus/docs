@@ -1,0 +1,30 @@
+---
+title: "List Components"
+description: "Get all components"
+---
+
+```
+GET /api/v1/components
+```
+
+<CodeGroup>
+```bash curl
+curl https://api.axonstatus.com/api/v1/components \
+  -H "Authorization: Bearer axon_sk_..."
+```
+</CodeGroup>
+
+```json Response
+{
+  "success": true,
+  "data": [
+    {
+      "id": "abc123",
+      "name": "API Server",
+      "status": "operational",
+      "position": 0,
+      "statusPageId": "..."
+    }
+  ]
+}
+```

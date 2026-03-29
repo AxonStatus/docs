@@ -1,0 +1,19 @@
+---
+title: "Delete Component"
+description: "Remove a component"
+---
+
+```
+DELETE /api/v1/components/{id}
+```
+
+<CodeGroup>
+```bash curl
+curl -X DELETE https://api.axonstatus.com/api/v1/components/abc123 \
+  -H "Authorization: Bearer axon_sk_..."
+```
+</CodeGroup>
+
+```json Response
+{ "success": true, "data": { "deleted": true } }
+```

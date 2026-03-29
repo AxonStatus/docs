@@ -1,0 +1,24 @@
+---
+title: "Components"
+description: "Track individual services and infrastructure"
+---
+
+Components represent the individual services that make up your system.
+
+## Statuses
+
+| Status | Description |
+|--------|-------------|
+| `operational` | Running normally |
+| `degraded_performance` | Slower than expected |
+| `partial_outage` | Some features unavailable |
+| `major_outage` | Complete service disruption |
+| `under_maintenance` | Scheduled maintenance |
+
+## Component groups
+
+Organize components into groups (e.g., "Core Services", "Infrastructure"). Groups are displayed as collapsible sections on the public page.
+
+## Uptime monitoring
+
+Each component can have one or more uptime checks attached. When a check detects an issue, the component status updates automatically.

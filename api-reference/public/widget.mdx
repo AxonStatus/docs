@@ -1,0 +1,35 @@
+---
+title: "Widget API"
+description: "JSON summary for custom integrations"
+---
+
+<Note>This endpoint is public. CORS enabled for all origins.</Note>
+
+## Get widget summary
+
+```
+GET /api/v1/widget/{slug}
+```
+
+<CodeGroup>
+```bash curl
+curl https://axonstatus.com/api/v1/widget/acme
+```
+
+```javascript fetch
+fetch("https://axonstatus.com/api/v1/widget/acme")
+  .then(r => r.json())
+  .then(data => console.log(data.status));
+```
+</CodeGroup>
+
+```json Response
+{
+  "page_title": "Acme Status",
+  "page_url": "https://acme.axonstatus.com",
+  "status": "operational",
+  "ongoing_incidents": [],
+  "in_progress_maintenances": [],
+  "scheduled_maintenances": []
+}
+```

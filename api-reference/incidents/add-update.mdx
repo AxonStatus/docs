@@ -1,0 +1,27 @@
+---
+title: "Add Incident Update"
+description: "Post a status update to an incident"
+---
+
+```
+POST /api/v1/incidents/{id}/updates
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `status` | string | Yes | `investigating`, `identified`, `monitoring`, `resolved` |
+| `message` | string | Yes | Update message |
+
+<CodeGroup>
+```bash curl
+curl -X POST https://api.axonstatus.com/api/v1/incidents/inc-123/updates \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{
+    "status": "identified",
+    "message": "Root cause identified. Deploying fix."
+  }'
+```
+</CodeGroup>
+
+<Info>Subscribers are notified for each update.</Info>

@@ -1,0 +1,20 @@
+---
+title: "List Subscribers"
+description: "Get all subscribers"
+---
+
+```
+GET /api/v1/subscribers
+```
+
+| Query param | Type | Description |
+|-------------|------|-------------|
+| `statusPageId` | string | Filter by status page |
+| `confirmed` | boolean | Filter by confirmation status |
+
+<CodeGroup>
+```bash curl
+curl https://api.axonstatus.com/api/v1/subscribers \
+  -H "Authorization: Bearer axon_sk_..."
+```
+</CodeGroup>

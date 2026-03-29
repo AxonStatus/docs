@@ -1,0 +1,24 @@
+---
+title: "Create Component"
+description: "Add a new component"
+---
+
+```
+POST /api/v1/components
+```
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `name` | string | Yes | Component name |
+| `description` | string | No | Brief description |
+| `statusPageId` | string | Yes | Status page ID |
+| `groupId` | string | No | Component group ID |
+
+<CodeGroup>
+```bash curl
+curl -X POST https://api.axonstatus.com/api/v1/components \
+  -H "Authorization: Bearer axon_sk_..." \
+  -H "Content-Type: application/json" \
+  -d '{"name": "API Server", "statusPageId": "page-id"}'
+```
+</CodeGroup>

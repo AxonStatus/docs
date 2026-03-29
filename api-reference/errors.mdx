@@ -1,0 +1,26 @@
+---
+title: "Errors"
+description: "HTTP status codes and error handling"
+---
+
+## Status codes
+
+| Code | Description |
+|------|-------------|
+| `200` | Success |
+| `201` | Created |
+| `400` | Bad request — invalid parameters |
+| `401` | Unauthorized — missing or invalid API key |
+| `403` | Forbidden — plan limit reached |
+| `404` | Not found |
+| `409` | Conflict — resource already exists |
+| `429` | Rate limited |
+| `500` | Internal server error |
+
+## Rate limits
+
+| Endpoint type | Limit |
+|---------------|-------|
+| Public | 60 requests/minute |
+| Authenticated (read) | 120 requests/minute |
+| Authenticated (write) | 30 requests/minute |

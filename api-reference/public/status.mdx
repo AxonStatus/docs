@@ -1,0 +1,36 @@
+---
+title: "Status Overview"
+description: "Get the public status of a status page"
+---
+
+<Note>This endpoint is public and does not require authentication.</Note>
+
+## Get status overview
+
+```
+GET /api/v1/status/{slug}
+```
+
+Returns the current status of a page including components and active incidents.
+
+<CodeGroup>
+```bash curl
+curl https://api.axonstatus.com/api/v1/status/acme
+```
+</CodeGroup>
+
+```json Response
+{
+  "success": true,
+  "data": {
+    "name": "Acme Status",
+    "slug": "acme",
+    "theme": "light",
+    "components": [
+      { "id": "...", "name": "API", "status": "operational" }
+    ],
+    "activeIncidents": [],
+    "maintenances": []
+  }
+}
+```
