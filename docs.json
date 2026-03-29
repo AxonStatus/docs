@@ -12,7 +12,7 @@
     }
   },
   "font": {
-    "headings": { "family": "Inter" },
+    "heading": { "family": "Inter" },
     "body": { "family": "Inter" }
   },
   "favicon": "/favicon.svg",
