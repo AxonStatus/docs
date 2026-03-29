@@ -2,14 +2,16 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "AxonStatus",
-  "appearance": "dark",
+  "appearance": {
+    "default": "dark"
+  },
+  "background": {
+    "dark": "#0a0a0a"
+  },
   "colors": {
     "primary": "#18E299",
     "light": "#18E299",
-    "dark": "#0C8C5E",
-    "background": {
-      "dark": "#0a0a0a"
-    }
+    "dark": "#0C8C5E"
   },
   "font": {
     "heading": { "family": "Inter" },
