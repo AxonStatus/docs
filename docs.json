@@ -2,7 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "quill",
   "name": "AxonStatus",
-  "appearance": "dark",
   "colors": {
     "primary": "#22c55e",
     "light": "#4ade80",
@@ -127,5 +126,5 @@
       "github": "https://github.com/axonstatus"
     }
   },
-  "rounded": "lg"
+  "roundedCorners": true
 }
