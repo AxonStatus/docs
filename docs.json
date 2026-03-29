@@ -1,13 +1,38 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "quill",
   "name": "AxonStatus",
+  "appearance": "dark",
   "colors": {
     "primary": "#22c55e",
     "light": "#4ade80",
-    "dark": "#16a34a"
+    "dark": "#16a34a",
+    "background": {
+      "dark": "#000000"
+    }
+  },
+  "font": {
+    "headings": { "family": "Inter" },
+    "body": { "family": "Inter" }
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@axonstatus.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://axonstatus.com"
+    }
+  },
   "navigation": {
     "tabs": [
       {
@@ -97,26 +122,10 @@
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@axonstatus.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://axonstatus.com"
-    }
-  },
   "footer": {
     "socials": {
       "github": "https://github.com/axonstatus"
     }
-  }
+  },
+  "rounded": "lg"
 }
