@@ -12,9 +12,9 @@
     }
   },
   "colors": {
-    "primary": "#ffffff",
-    "light": "#111111",
-    "dark": "#ffffff"
+    "primary": "#a1a1aa",
+    "light": "#18181b",
+    "dark": "#d4d4d8"
   },
   "fonts": {
     "heading": { "family": "Inter" },
