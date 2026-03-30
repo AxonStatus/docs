@@ -26,10 +26,10 @@
       "mode": "simple"
     }
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://cdn.jsdelivr.net/gh/AxonStatus/docs@main/favicon.svg",
   "logo": {
-    "light": "https://raw.githubusercontent.com/AxonStatus/docs/main/logo/light.svg",
-    "dark": "https://raw.githubusercontent.com/AxonStatus/docs/main/logo/dark.svg"
+    "light": "https://cdn.jsdelivr.net/gh/AxonStatus/docs@main/logo/light.svg",
+    "dark": "https://cdn.jsdelivr.net/gh/AxonStatus/docs@main/logo/dark.svg"
   },
   "navbar": {
     "links": [
