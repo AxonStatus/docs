@@ -12,9 +12,9 @@
     }
   },
   "colors": {
-    "primary": "#18E299",
-    "light": "#18E299",
-    "dark": "#0C8C5E"
+    "primary": "#ffffff",
+    "light": "#111111",
+    "dark": "#ffffff"
   },
   "fonts": {
     "heading": { "family": "Inter" },
@@ -22,8 +22,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://raw.githubusercontent.com/AxonStatus/docs/main/logo/light.svg",
+    "dark": "https://raw.githubusercontent.com/AxonStatus/docs/main/logo/dark.svg"
   },
   "navbar": {
     "links": [
