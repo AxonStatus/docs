@@ -20,6 +20,12 @@
     "heading": { "family": "Inter" },
     "body": { "family": "Inter" }
   },
+  "api": {
+    "baseUrl": "https://api.axonstatus.com",
+    "playground": {
+      "mode": "simple"
+    }
+  },
   "favicon": "/favicon.svg",
   "logo": {
     "light": "https://raw.githubusercontent.com/AxonStatus/docs/main/logo/light.svg",
